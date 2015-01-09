@@ -1,4 +1,4 @@
-package br.com.walmart.webdriver;
+package br.com.exemplo.webdriver;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
-import br.com.walmart.configuracao.Propriedades;
+import br.com.exemplo.configuracao.Propriedades;
 import static org.junit.Assert.*;
 
 public class IniciarTunelBrowserStack {

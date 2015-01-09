@@ -1,4 +1,4 @@
-package br.com.walmart.webdriver;
+package br.com.exemplo.webdriver;
 
 import java.net.URL;
 import java.util.Properties;
@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import br.com.walmart.configuracao.Propriedades;
+import br.com.exemplo.configuracao.Propriedades;
 
 public class SetupWebDriver extends TestCase {
 	static final Properties prop = new Propriedades().getProp();
@@ -42,6 +42,7 @@ public class SetupWebDriver extends TestCase {
 			new IniciarTunelBrowserStack().start(false);
 			webDriver = new RemoteWebDriver(new URL(URL), capability);
 			webDriver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			webDriver.manage().window().maximize();
 		} else {
 			webDriver = new FirefoxDriver();
 		}

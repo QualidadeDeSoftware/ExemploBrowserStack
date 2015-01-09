@@ -1,4 +1,4 @@
-package br.com.walmart.webdriver;
+package br.com.exemplo.webdriver;
 
 import java.net.URL;
 import java.util.Properties;
@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import br.com.walmart.configuracao.Propriedades;
+import br.com.exemplo.configuracao.Propriedades;
 
 public abstract class SetupWebDriverParallelized extends TestCase {
 	protected WebDriver webDriver = null;
@@ -54,6 +54,7 @@ public abstract class SetupWebDriverParallelized extends TestCase {
 		new IniciarTunelBrowserStack().start(true);
 		webDriver = new RemoteWebDriver(new URL(URL), capability);
 		webDriver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		webDriver.manage().window().maximize();
 	}
 
 	@After

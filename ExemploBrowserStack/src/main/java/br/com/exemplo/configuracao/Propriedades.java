@@ -1,4 +1,4 @@
-package br.com.walmart.configuracao;
+package br.com.exemplo.configuracao;
 
 import java.io.FileInputStream;
 import java.util.Properties;

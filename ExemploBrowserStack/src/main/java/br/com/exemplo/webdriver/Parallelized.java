@@ -1,4 +1,4 @@
-package br.com.walmart.webdriver;
+package br.com.exemplo.webdriver;
 
 import java.util.Properties;
 import java.util.concurrent.ExecutorService;
@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.runners.Parameterized;
 import org.junit.runners.model.RunnerScheduler;
 
-import br.com.walmart.configuracao.Propriedades;
+import br.com.exemplo.configuracao.Propriedades;
 
 public class Parallelized extends Parameterized {
 
